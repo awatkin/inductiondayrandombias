@@ -11,26 +11,26 @@ Through working on the tasks below, you will learn about:
 - Using lists
 - Using selection
 
-##Random Number Bias
+## Random Number Bias
 
 Python, like many languages has a large number of included libraries. Like many other languages there is a random number generating library. 
 
 But, just how random is the random number library. We are going to create code, to roll a six sided dice to assess the bias of the standard random library. 
 
-##Tasks
+## Tasks
 
 In this code, there are 3 challenges to attempt:
 
-###Challenge 1
+### Challenge 1
 
 Take a user input for how many times to roll the D6 dice. Record, using a list, the number of times each number is rolled and then out put the results. 
 
-###Challenege 2
+### Challenege 2
 
 In this task, alter your code to take in both a number of times to roll the D6, followed by a number of times to repeat the test. 
 Record the results into a list and output the results at the end. 
 
-###Challenege 3
+### Challenege 3
 
 Alter your code once more to also tell the user the breakdown of the results including:
 
