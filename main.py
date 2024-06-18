@@ -25,12 +25,12 @@ if you feel the library is bias.
 def main():  # main subroutine in which the code should be added
     results = [0, 0, 0, 0, 0, 0]  # Created a list to store the results
     rolls = int(input("How many times would you like to roll? "))  # Takes in user input, as an integer, for rolls
-    for i in range(0,rolls):  # launchers the iteration for the rolls
+    for i in range(0, rolls):  # launchers the iteration for the rolls
         num = random.randint(1, 6)  # generates the dice roll
         results[num-1] += 1  # accesses the list to increment the number
-    print("The roles have concluded, here are the results") # post rolls message
+    print("The roles have concluded, here are the results")  # post rolls message
     for i in range(len(results)):  # starts iteration to print results
-        print("The number ", str(i+1), " was rolled ", str(results[i]))  # formats results nicelyu
+        print("The number ", str(i+1), " was rolled ", str(results[i]))  # formats results nicely
 
 
 if __name__ == '__main__':  # standard way of starting code
