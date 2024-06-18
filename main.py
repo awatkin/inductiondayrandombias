@@ -13,9 +13,8 @@ Completed in this code
 
 2. Ask the user how many repeats of the test to do as well as the number of times to roll. Report the results
 
-Not in this code:
-3. Assess the results to say which number is the highest, by how much, the smallest number, and if you can, 
-if you feel the library is bias. 
+3. Assess the results to say which number is the highest, the smallest number, The difference between highest and 
+lowest and if you can, tell me if you feel the library is bias. 
 '''
 
 
@@ -38,7 +37,28 @@ def main():  # main subroutine in which the code should be added
                 high = i
             # print("The number ", str(i+1), " was rolled ", str(temprolls[i]))  # formats results nicely
         results[high] += 1  # increments the appropriate index
-    print(results)  # prints out the overall results
+    print("The rolls and repeats have completed here are the results")
+    # prints out the overall results
+    h = 0  # temp variable to store the highest number index
+    l = 0  # temp variable to store the lowest number index
+
+    for i in range(0, len(results)):  # iteration to determine the high, low and print
+        if results[i] > results[h]:  # Looking for the highest
+            h = i  # updating the index in h for new highest
+        if results[i] < results[l]:  # looking for the lowest
+            l = i  # updating the indexin l for the new lowest
+        print("The number ", str(i + 1), " was the highest number in ", str(results[i]), " of the repeats")  # print
+
+    print(str(h+1), " is the highest number, with ", str(results[h]), " rolls")  # output for highest
+    dist = results[h] - results[l]  # calcs the distance
+    print(" The distance between the highest and lowest was ", str(dist))  # output
+    percent = dist/repeats*100  # calc % difference
+    if percent > 5.0:  # selection based on output
+        print("There is some bias towards the highest number")
+    else:
+        print("There is no real bias in the library")
+    print("The % difference between high and low is ", str(percent))
+    print(str(l+1), " is the lowest number, with ", str(results[l]), " rolls")  # output the lowest num
 
 
 if __name__ == '__main__':  # standard way of starting code
